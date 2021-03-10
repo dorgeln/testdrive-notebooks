@@ -1,3 +1,5 @@
-FROM dorgeln/datascience:latest
+ARG DOCKER_USER=dorgeln
+ARG DOCKER_REPO=datascience
+ARG DOCKER_TAG=latest
 
-ADD *.ipynb ${HOME}/
+FROM ${DOCKER_USER}/${DOCKER_REPO}:${DOCKER_TAG}
