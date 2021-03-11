@@ -7,21 +7,4 @@ ARG GITHUB_REPO=notebooks
 
 FROM ${DOCKER_USER}/${DOCKER_REPO}:${DOCKER_TAG}
 
-ARG NB_USER=auser 
-ARG NB_UID=1000
-ARG NB_GROUPS="adm,kvm,wheel,network,uucp,users" # Allow user to use su & sudo
-# ARG NB_GROUPS="users" # Normal user permission
-
-
-RUN useradd -m --uid ${NB_UID} -G ${NB_GROUPS} ${NB_USER}
-
-ENV USER ${NB_USER}
-ENV HOME /home/${USER}
-
-WORKDIR ${HOME}
-USER ${USER} 
-RUN ln -s ${NODE_PATH} ${HOME}/node_modules
-
-RUN git clone https://github.com/dorgeln/notebooks.git notebooks
-WORKDIR ${HOME}/notebooks
-
+ADD *.ipynb ${HOME}/
