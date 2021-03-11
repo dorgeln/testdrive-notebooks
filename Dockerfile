@@ -1,13 +1,14 @@
 <<<<<<< Updated upstream
 ARG DOCKER_USER=dorgeln
 ARG DOCKER_REPO=datascience
-ARG DOCKER_TAG=20210307.00001
+ARG DOCKER_TAG=20210307.00002
 
 ARG GITHUB_USER=dorgeln
 ARG GITHUB_REPO=notebooks
 
 FROM ${DOCKER_USER}/${DOCKER_REPO}:${DOCKER_TAG}
 
+<<<<<<< HEAD
 ARG NB_USER=auser 
 ARG NB_UID=1000
 ARG NB_GROUPS="adm,kvm,wheel,network,uucp,users" # Allow user to use su & sudo
@@ -41,3 +42,6 @@ RUN git clone https://github.com/dorgeln/notebooks.git notebooks
 
 WORKDIR notebooks
 >>>>>>> Stashed changes
+=======
+ADD *.ipynb ${HOME}/
+>>>>>>> 20210307.00002
