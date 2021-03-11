@@ -1,4 +1,4 @@
-FROM dorgeln/notebooks:20210307.00002
+FROM dorgeln/datascience:20210307.00002
 
 # ADD *.ipynb ${HOME}/
 
