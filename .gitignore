@@ -128,8 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-data/in/*
-data/out/*
+#data/in/*
+#data/out/*
 .local/
 .jupyter/
 .npm/
