@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ARG DOCKER_USER=dorgeln
 ARG DOCKER_REPO=datascience
 ARG DOCKER_TAG=20210307.00001
@@ -25,3 +26,18 @@ RUN ln -s ${NODE_PATH} ${HOME}/node_modules
 RUN git clone https://github.com/dorgeln/notebooks.git notebooks
 WORKDIR ${HOME}/notebooks
 
+=======
+ARG DOCKER_USER=dorgeln \
+    DOCKER_REPO=datascience \
+    DOCKER_TAG=20210307.00002 \
+    GITHUB_USER=dorgeln \
+    GITHUB_REPO=notebooks
+
+FROM ${DOCKER_USER}/${DOCKER_REPO}:${DOCKER_TAG}
+
+# ADD *.ipynb ${HOME}/
+
+RUN git clone https://github.com/dorgeln/notebooks.git notebooks
+
+WORKDIR notebooks
+>>>>>>> Stashed changes
