@@ -131,3 +131,5 @@ dmypy.json
 data/in/*
 data/out/*
 .local/
+.jupyter/
+.npm/
