@@ -6,4 +6,4 @@ DOCKER_TAG := latest
 
 
 binder:
-	jupyter-repo2docker --cache-from ${DOCKER_USER}/${DOCKER_REPO}:${DOCKER_TAG} --user-name ${USER} --volume data:data --image-name ${DOCKER_REPO}:${DOCKER_TAG} .
+	jupyter-repo2docker --user-name ${USER} --volume data:data --image-name ${DOCKER_REPO}-binder:${DOCKER_TAG} .
